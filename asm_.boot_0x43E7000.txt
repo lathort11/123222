@@ -1,0 +1,1950 @@
+0x043E7000  jnz     short near ptr dword_43E6EC8+0BDh
+0x043E7058  call    sub_43E71A8
+0x043E705D  push    ebx
+0x043E705E  mov     ebx, esp
+0x043E7060  push    ebx
+0x043E7061  mov     esi, [ebx+8]
+0x043E7064  mov     edi, [ebx+10h]
+0x043E7067  cld
+0x043E7068  mov     dl, 80h
+0x043E706A  mov     al, [esi]
+0x043E706C  inc     esi
+0x043E706D  mov     [edi], al
+0x043E706F  inc     edi
+0x043E7070  mov     ebx, 2
+0x043E7075  add     dl, dl
+0x043E7077  jnz     short loc_43E707E
+0x043E7079  mov     dl, [esi]
+0x043E707B  inc     esi
+0x043E707C  adc     dl, dl
+0x043E707E  jnb     short loc_43E706A
+0x043E7080  add     dl, dl
+0x043E7082  jnz     short loc_43E7089
+0x043E7084  mov     dl, [esi]
+0x043E7086  inc     esi
+0x043E7087  adc     dl, dl
+0x043E7089  jnb     short loc_43E70DC
+0x043E708B  xor     eax, eax
+0x043E708D  add     dl, dl
+0x043E708F  jnz     short loc_43E7096
+0x043E7091  mov     dl, [esi]
+0x043E7093  inc     esi
+0x043E7094  adc     dl, dl
+0x043E7096  jnb     loc_43E717D
+0x043E709C  add     dl, dl
+0x043E709E  jnz     short loc_43E70A5
+0x043E70A0  mov     dl, [esi]
+0x043E70A2  inc     esi
+0x043E70A3  adc     dl, dl
+0x043E70A5  adc     eax, eax
+0x043E70A7  add     dl, dl
+0x043E70A9  jnz     short loc_43E70B0
+0x043E70AB  mov     dl, [esi]
+0x043E70AD  inc     esi
+0x043E70AE  adc     dl, dl
+0x043E70B0  adc     eax, eax
+0x043E70B2  add     dl, dl
+0x043E70B4  jnz     short loc_43E70BB
+0x043E70B6  mov     dl, [esi]
+0x043E70B8  inc     esi
+0x043E70B9  adc     dl, dl
+0x043E70BB  adc     eax, eax
+0x043E70BD  add     dl, dl
+0x043E70BF  jnz     short loc_43E70C6
+0x043E70C1  mov     dl, [esi]
+0x043E70C3  inc     esi
+0x043E70C4  adc     dl, dl
+0x043E70C6  adc     eax, eax
+0x043E70C8  jz      short loc_43E70D2
+0x043E70CA  push    edi
+0x043E70CB  mov     eax, eax
+0x043E70CD  sub     edi, eax
+0x043E70CF  mov     al, [edi]
+0x043E70D1  pop     edi
+0x043E70D2  mov     [edi], al
+0x043E70D4  inc     edi
+0x043E70D5  mov     ebx, 2
+0x043E70DA  jmp     short loc_43E7075
+0x043E70DC  mov     eax, 1
+0x043E70E1  add     dl, dl
+0x043E70E3  jnz     short loc_43E70EA
+0x043E70E5  mov     dl, [esi]
+0x043E70E7  inc     esi
+0x043E70E8  adc     dl, dl
+0x043E70EA  adc     eax, eax
+0x043E70EC  add     dl, dl
+0x043E70EE  jnz     short loc_43E70F5
+0x043E70F0  mov     dl, [esi]
+0x043E70F2  inc     esi
+0x043E70F3  adc     dl, dl
+0x043E70F5  jb      short loc_43E70E1
+0x043E70F7  sub     eax, ebx
+0x043E70F9  mov     ebx, 1
+0x043E70FE  jnz     short loc_43E7128
+0x043E7100  mov     ecx, 1
+0x043E7105  add     dl, dl
+0x043E7107  jnz     short loc_43E710E
+0x043E7109  mov     dl, [esi]
+0x043E710B  inc     esi
+0x043E710C  adc     dl, dl
+0x043E710E  adc     ecx, ecx
+0x043E7110  add     dl, dl
+0x043E7112  jnz     short loc_43E7119
+0x043E7114  mov     dl, [esi]
+0x043E7116  inc     esi
+0x043E7117  adc     dl, dl
+0x043E7119  jb      short loc_43E7105
+0x043E711B  push    esi
+0x043E711C  mov     esi, edi
+0x043E711E  sub     esi, ebp
+0x043E7120  rep movsb
+0x043E7122  pop     esi
+0x043E7123  jmp     loc_43E7075
+0x043E7128  dec     eax
+0x043E7129  shl     eax, 8
+0x043E712C  mov     al, [esi]
+0x043E712E  inc     esi
+0x043E712F  mov     ebp, eax
+0x043E7131  mov     ecx, 1
+0x043E7136  add     dl, dl
+0x043E7138  jnz     short loc_43E713F
+0x043E713A  mov     dl, [esi]
+0x043E713C  inc     esi
+0x043E713D  adc     dl, dl
+0x043E713F  adc     ecx, ecx
+0x043E7141  add     dl, dl
+0x043E7143  jnz     short loc_43E714A
+0x043E7145  mov     dl, [esi]
+0x043E7147  inc     esi
+0x043E7148  adc     dl, dl
+0x043E714A  jb      short loc_43E7136
+0x043E714C  cmp     eax, 7D00h
+0x043E7151  jnb     short loc_43E716D
+0x043E7153  cmp     eax, 500h
+0x043E7158  jb      short loc_43E7168
+0x043E715A  inc     ecx
+0x043E715B  push    esi
+0x043E715C  mov     esi, edi
+0x043E715E  sub     esi, eax
+0x043E7160  rep movsb
+0x043E7162  pop     esi
+0x043E7163  jmp     loc_43E7075
+0x043E7168  cmp     eax, 7Fh
+0x043E716B  ja      short loc_43E7170
+0x043E716D  add     ecx, 2
+0x043E7170  push    esi
+0x043E7171  mov     esi, edi
+0x043E7173  sub     esi, eax
+0x043E7175  rep movsb
+0x043E7177  pop     esi
+0x043E7178  jmp     loc_43E7075
+0x043E717D  mov     al, [esi]
+0x043E717F  inc     esi
+0x043E7180  xor     ecx, ecx
+0x043E7182  shr     al, 1
+0x043E7185  jz      short loc_43E719E
+0x043E7187  adc     ecx, 2
+0x043E718A  mov     ebp, eax
+0x043E718C  push    esi
+0x043E718D  mov     esi, edi
+0x043E718F  sub     esi, eax
+0x043E7191  rep movsb
+0x043E7193  pop     esi
+0x043E7194  mov     ebx, 1
+0x043E7199  jmp     loc_43E7075
+0x043E719E  pop     ebx
+0x043E719F  sub     edi, [ebx+10h]
+0x043E71A2  mov     eax, edi
+0x043E71A4  pop     ebx
+0x043E71A5  retn    10h
+0x043E71A8  pop     eax
+0x043E71A9  push    ebx
+0x043E71AA  push    ecx
+0x043E71AB  push    edx
+0x043E71AC  push    esi
+0x043E71AD  push    edi
+0x043E71AE  push    ebp
+0x043E71AF  mov     ebx, eax
+0x043E71B1  sub     ebx, 5
+0x043E71B4  mov     ecx, (offset loc_4B0056+2)
+0x043E71B9  sub     ebx, ecx
+0x043E71BB  push    eax
+0x043E71BC  mov     eax, 229CDh
+0x043E71C1  add     eax, ebx
+0x043E71C3  cmp     dword ptr [eax], 0
+0x043E71C6  jz      short loc_43E71CB
+0x043E71C8  pop     eax
+0x043E71C9  jmp     short loc_43E71E0
+0x043E71CB  pop     eax
+0x043E71CC  mov     ecx, 197h
+0x043E71D1  sub     ecx, 5
+0x043E71D4  add     ecx, eax
+0x043E71D6  push    ebx
+0x043E71D7  push    0
+0x043E71D9  push    ebx
+0x043E71DA  push    0
+0x043E71DC  push    ecx
+0x043E71DD  call    eax
+0x043E71DF  pop     ebx
+0x043E71E0  mov     eax, 229CDh
+0x043E71E5  add     eax, ebx
+0x043E71E7  pop     ebp
+0x043E71E8  pop     edi
+0x043E71E9  pop     esi
+0x043E71EA  pop     edx
+0x043E71EB  pop     ecx
+0x043E71EC  pop     ebx
+0x043E71ED  jmp     eax
+0x043E71EF  hlt
+0x043E71F3  xchg    eax, esi
+0x043E71F4  scasb
+0x043E79F4  mov     dl, 4Fh ; 'O'
+0x043E81F4  jle     short near ptr dword_43E81F4+47h
+0x043E89F4  movsb
+0x043E91F4  xor     eax, 6F2B1AB3h
+0x043E99F4  and     eax, 184C1CC6h
+0x043EA1F4  insd
+0x043EA9F4  popf
+0x043EB1F4  into
+0x043EB9F4  pushf
+0x043EC1F4  shl     byte ptr [ecx], 0DBh
+0x043EC9F4  dd 50F909C6h, 0E964759Ch, 0C13958A2h, 0C831F20Bh, 35251546h
+0x043ED1F4  retf
+0x043ED9F4  pop     ds
+0x043EE1F4  cmp     esi, [esp+ebx]
+0x043EE9F4  and     esi, edx
+0x043EF1F4  sub     ecx, ebx
+0x043EF9F4  xchg    eax, esi
+0x043F01F4  pop     esi
+0x043F09F4  les     edx, [ebp-43h]
+0x043F11F4  outsd
+0x043F19F4  popf
+0x043F21F4  xchg    eax, ebx
+0x043F29F4  sbb     [eax+ebp*8], edx
+0x043F31F4  sbb     [bp+si+1284h], al
+0x043F39F4  pop     ebx
+0x043F41F4  mov     esp, 24645E6Dh
+0x043F49F4  xor     al, 0E0h
+0x043F51F4  popf
+0x043F5930  adc     ebp, [ebx]
+0x043F5932  popa
+0x043F5934  fmul    st, st(7)
+0x043F6134  mov     ecx, 0D81E682Ah
+0x043F6934  jns     short near ptr dword_43F6934+63h
+0x043F7134  mov     ebx, esp
+0x043F7934  jnp     short near ptr dword_43F7934+5
+0x043F8134  sub     [ebx], eax
+0x043F8934  sar     edi, 40h ; '@'
+0x043F9134  sbb     [ebx], dh
+0x043F9934  jno     short near ptr dword_43F9934+29h
+0x043FA134  jnz     short near ptr dword_43FA134+5Eh
+0x043FA934  push    ss
+0x043FA9AC  add     [eax+edx+3], al
+0x043FA9B0  in      al, 0B6h
+0x043FB1B0  or      edx, ecx
+0x043FB9B0  dec     edi
+0x043FC1B0  cmp     eax, 1A1D54C2h
+0x043FC9B0  adc     al, 73h ; 's'
+0x043FD1B0  cmp     [edx], ah
+0x043FD9B0  or      [eax+4F6AFB2Fh], ah
+0x043FE1B0  mov     al, 0C8h
+0x043FE9B0  dec     edx
+0x043FF1B0  and     al, dh
+0x043FF9B0  iret
+0x044001B0  sub     [ebp+eax+6B41D195h], ah
+0x044009B0  xor     eax, [edi+ebx*4]
+0x044011B0  cld
+0x044019B0  adc     ch, [edi]
+0x044021B0  out     dx, eax
+0x044029B0  sti
+0x044031B0  les     ebx, [edx+17h]
+0x044039B0  sbb     [eax+389B21EDh], al
+0x044041B0  xlat
+0x044049B0  jmp     near ptr 94EE72BEh
+0x044051B0  movsb
+0x044059B0  daa
+0x044061B0  inc     ecx
+0x044069B0  sbb     ah, [edi]
+0x044071B0  sub     eax, 0D3E26F3Fh
+0x044079B0  inc     esi
+0x044081B0  repne popf
+0x044089B0  lodsd
+0x044091B0  cld
+0x044099B0  add     al, 80h
+0x0440A1B0  jnz     short near ptr 0A1DEh
+0x0440A9B0  pop     esi
+0x0440B1B0  cld
+0x0440B9B0  add     edi, ecx
+0x0440C1B0  sub     esi, edx
+0x0440C9B0  mov     dl, 0FEh
+0x0440D1B0  mov     edx, 52D156BFh
+0x0440D9B0  lock pushf
+0x0440E1B0  scasb
+0x0440E9B0  and     ch, ch
+0x0440F1B0  inc     ecx
+0x0440F9B0  fcomp   qword ptr [edx-23h]
+0x044101B0  lock xlat
+0x044109B0  scasd
+0x044111B0  xor     [esi+2D107B09h], bh
+0x044119B0  sub     ebx, ecx
+0x044121B0  rcl     dword ptr [esi-7D081A8Eh], cl
+0x044128E4  add     [esi+0], bh
+0x044128E8  mov     esi, 728CF0C7h
+0x044130E8  or      eax, 0DE8E90C9h
+0x044138E8  pop     esi
+0x044140E8  pop     edi
+0x044148E8  std
+0x04414DF8  xor     dh, cl
+0x04414DFA  retn
+0x04414DFB  adc     [ebx+0CD3A62Fh], ecx
+0x04414DFC  mov     ebp, [edi]
+0x044155FC  pop     ecx
+0x04415DFC  retn    0DF44h
+0x044165FC  scasb
+0x04416DFC  retf
+0x044175FC  push    eax
+0x04417DFC  fucomi  st, st(4)
+0x044185FC  pusha
+0x04418DFC  pop     es
+0x044195FC  inc     ebp
+0x04419DFC  aas
+0x0441A5FC  xchg    eax, esp
+0x0441ADFC  pop     es
+0x0441B5FC  imul    esp, [esi-3A38DA51h], -31h
+0x0441BDFC  mov     edi, 0EC4F52A6h
+0x0441C5FC  mov     edx, 0ACD6D7ECh
+0x0441CA20  push    ebp
+0x0441CA21  mov     ebp, esp
+0x0441CA23  add     esp, 0FFFFFFFCh
+0x0441CA26  pusha
+0x0441CA27  in      al, dx
+0x0441CA28  jge     short loc_441CAA3
+0x0441CA2A  or      [ecx], al
+0x0441CA2C  jnz     short near ptr loc_441CA38+2
+0x0441CA2E  jmp     short loc_441CA31
+0x0441CA30  inc     esi
+0x0441CA31  cmp     byte ptr [esi], 20h ; ' '
+0x0441CA34  push    esi
+0x0441CA35  cli
+0x0441CA36  in      eax, dx
+0x0441CA37  xchg    eax, ecx
+0x0441CA38  adc     ah, [edi+ecx*4+61FCA189h]
+0x0441CA3F  mov     eax, [ebp-30h]
+0x0441CA42  leave
+0x0441CA43  retn    856h
+0x0441CA46  sub     dh, [edi+eax*8]
+0x0441CA48  dd 0E2A81CC7h, 7D62758Ch, 0F0A60380h, 9554D011h, 0BD6E0524h
+0x0441CAA0  sbb     [edi], dh
+0x0441CAA3  inc     eax
+0x0441CAA4  or      eax, 32046408h
+0x0441CAA9  or      [ecx], bl
+0x0441CAAB  or      al, 0Ch
+0x0441CAAD  adc     byte ptr (loc_11E1444+1)[esi], al
+0x0441CAB3  dec     dword ptr [ecx-77DB9E86h]
+0x0441CAB9  xchg    eax, ecx
+0x0441CABA  or      [edx-45BB53DEh], ebx
+0x0441CAC0  retn    6889h
+0x0441CAC3  sub     eax, 90488F8Dh
+0x0441CAC4  lea     ecx, [edi-291D6FB8h]
+0x0441D2C4  int     3
+0x0441DAC4  setalc
+0x0441E2C4  sub     esi, [ebx]
+0x0441EAC4  sbb     eax, ebx
+0x0441F2C4  in      eax, 0CEh
+0x0441FAC4  setalc
+0x04420088  mov     edx, 0BDBFE828h
+0x04420089  sub     al, ch
+0x0442008D  push    ss
+0x04420090  mov     [esi-220636EDh], bl
+0x04420890  adc     [ebx+0Bh], dl
+0x04421090  or      byte ptr [edx-44h], 0BAh
+0x04421890  mov     esi, 0AFE562A8h
+0x04422090  popf
+0x04422890  mov     ebp, 2CBB4B74h
+0x04423090  mov     bh, 0CBh
+0x04423890  sub     [esi-35h], ecx
+0x04424090  add     edx, ecx
+0x04424890  fstp    tbyte ptr [ecx]
+0x04425090  dd 6FB6AFC7h, 8BDDBD4Ah, 0EB89FEFBh, 93D9C4Eh, 45F6AFC7h
+0x04425890  adc     [edx], ecx
+0x04426090  inc     cx
+0x04426890  dec     edx
+0x04427090  xor     dh, [ebp-0E628BABh]
+0x04427890  jmp     dword ptr ds:0E8AAA025h
+0x04428090  pop     esi
+0x04428890  jb      short near ptr dword_4428090+78Bh
+0x04429090  jmp     far ptr 0B942h:0AC71C9CBh
+0x04429890  dec     eax
+0x0442A090  dec     esp
+0x0442A808  push    ebp
+0x0442A809  mov     ebp, esp
+0x0442A80B  add     ebp, 830668BFh
+0x0442A812  xor     ebp, [esp]
+0x0442A815  xor     [ecx+6], esp
+0x0442A818  or      eax, 0E668E95Ch
+0x0442A81D  retn
+0x0442A81E  pop     esp
+0x0442A820  inc     esi
+0x0442B020  cmp     ebx, ecx
+0x0442B820  lock in eax, 0D5h
+0x0442C020  xor     dword ptr [edx-4604CE23h], 0AC99657Eh
+0x0442C820  rol     dl, 1
+0x0442D020  or      [edi+39h], ecx
+0x0442D820  push    cs
+0x0442E020  and     [ebx], ecx
+0x0442E820  sub     eax, 79A354EFh
+0x0442F020  mov     esp, ebx
+0x0442F820  mov     dl, 0AEh
+0x0442FBC0  xor     ch, [edi+7710BAE2h]
+0x0442FBC1  scasd
+0x0442FBC4  adc     [edi+5Eh], dh
+0x044303C4  dec     esp
+0x04430BC4  aam     0D2h
+0x044313C4  push    eax
+0x04431BC4  dec     esi
+0x044323C4  cmp     [esi-39h], bl
+0x04432BC4  lodsd
+0x044333C4  mov     esi, ebp
+0x04433BC4  mov     dl, 0E8h
+0x0443411C  and     [ebx+0], cl
+0x04434120  arpl    [eax], cx
+0x04434920  sub     [eax-4Ch], ah
+0x04435120  icebp
+0x04435920  cmp     eax, 70B9FD6Bh
+0x04436120  xor     ch, ch
+0x04436920  sub     ecx, esi
+0x04437120  int     12h
+0x04437920  cmc
+0x04438120  add     esp, [edi-117174D1h]
+0x04438920  xor     eax, 0F70831C2h
+0x04439120  jnp     short near ptr dword_4438920+7F3h
+0x04439920  lds     ebp, [ebp-78h]
+0x0443A120  loop    near ptr dword_443A120+60h
+0x0443A920  xor     [esi-6330D615h], al
+0x0443B120  test    edx, esp
+0x0443B920  dd 0DA25EBFEh, 3E66E36Bh, 0EE34CBEBh, 2D2CDAF9h, 0B4C5ABDh
+0x0443BF90  dd 60C5F2C7h, 899BD8BFh, 0F0211B0Eh, 0ED34503Fh, 0B0131A70h
+0x0443C790  dec     byte ptr [ecx]
+0x0443CF90  adc     edx, eax
+0x0443D790  sub     eax, 5B13FA8h
+0x0443DF90  jo      short near ptr dword_443DF90+67h
+0x0443E790  dd 0C82BB7FEh, 0C6519476h, 34A67F69h, 13D1E950h, 0D995099Dh
+0x0443EF90  inc     edx
+0x0443F790  push    ss
+0x0443FF90  sub     eax, 0A7ECC5B8h
+0x04440790  leave
+0x04440F90  fdivrp  st(5), st
+0x04441790  jecxz   short near ptr dword_4441790+38h
+0x04441F90  add     eax, 0DDC0095Fh
+0x04442188  or      al, 0A0h
+0x0444218B  add     eax, 3DB99F2Dh
+0x0444218C  sub     eax, 0D33DB99Fh
+0x0444298C  clc
+0x0444318C  sub     [edx], eax
+0x0444398C  push    eax
+0x0444418C  sub     dl, [esi+753D44F8h]
+0x04444440  inc     ebp
+0x04444443  mov     edi, 497E797Dh
+0x04444444  jge     short near ptr dword_4444444+7Bh
+0x04444C44  dec     ebx
+0x04445444  iret
+0x04445C44  retn    0FAC3h
+0x04446444  pop     eax
+0x04446C44  pop     ds
+0x04447444  xor     ecx, [edx]
+0x04447C44  pop     esi
+0x04448444  xor     ebx, edx
+0x04448C44  mov     dh, 37h ; '7'
+0x04449444  sub     eax, [ebp+11E6F218h]
+0x04449848  push    ebx
+0x04449849  push    ebx
+0x0444984C  add     cl, [edi+edi*8-0CE3B7D8h]
+0x0444A04C  pusha
+0x0444A84C  xchg    bl, [ebx+2]
+0x0444B04C  pop     ebp
+0x0444B84C  pop     ds
+0x0444C04C  mov     ebp, [ecx-37584D42h]
+0x0444C84C  fld     tbyte ptr ds:4408A75Bh
+0x0444D04C  daa
+0x0444D84C  dec     edx
+0x0444E04C  pop     ds
+0x0444E84C  sub     [eax], cl
+0x0444F04C  cmp     eax, 46AEF548h
+0x0444F84C  pop     edi
+0x0445004C  sub     byte ptr [esp+edx*4], 0A5h
+0x0445084C  in      eax, 4Fh ; 'O'
+0x0445104C  dd 0C1D4B8C6h, 9E0276EFh, 774BD7BFh, 819590E6h, 3105FB61h
+0x0445184C  pop     edx
+0x0445204C  aam     30h ; '0'
+0x0445284C  jo      short near ptr dword_445204C+7BDh
+0x0445304C  pop     edx
+0x0445384C  jbe     short near ptr 3866h
+0x0445404C  cmp     [ebp+0], ah
+0x0445484C  stosb
+0x0445504C  popf
+0x0445584C  shl     byte ptr [esi-6Fh], 1
+0x04455E9C  jno     short near ptr dword_445584C+603h
+0x04455E9E  inc     esi
+0x04455E9F  db 0FEh
+0x04455EA0  sbb     dh, [ebp+212D7494h]
+0x044566A0  sbb     ecx, [edx-77A107CFh]
+0x04456EA0  jecxz   short near ptr dword_4456EA0+1Eh
+0x044576A0  mov     eax, 9EEB0905h
+0x04457704  and     [eax+36h], cl
+0x04457708  sbb     [esi+58h], eax
+0x04457F08  jp      short near ptr dword_4457708+79Eh
+0x04458708  mov     ch, [ebx+27h]
+0x04458F08  sar     dword ptr [edi+2DEA2BBBh], 0ABh
+0x04459708  retn
+0x04459F08  and     ebx, ecx
+0x0445A708  out     7Dh, eax ; '}'
+0x0445AF08  jmp     short near ptr dword_445AF08+0Dh
+0x0445B708  xchg    eax, edx
+0x0445BF08  and     [esp+eax*8-31h], ch
+0x0445C708  out     dx, eax
+0x0445CF08  outsb
+0x0445D708  rep out dx, eax
+0x0445DF08  inc     ecx
+0x0445E708  fidivr  word ptr [edi+edi*4-4B172523h]
+0x0445EF08  into
+0x0445F708  sbb     edx, [eax+54h]
+0x0445F9B4  mov     byte ptr [edx+27h], 3
+0x0445F9B8  xor     ah, dh
+0x044601B8  mov     eax, ds:0C43E3209h
+0x04460320  sar     dl, 1
+0x04460324  or      cl, [ecx]
+0x04460B24  cmp     bh, dh
+0x04461324  shl     dword ptr [eax], cl
+0x04461B24  jo      short near ptr dword_4461B24+29h
+0x04462324  pop     edx
+0x04462B24  xchg    eax, edx
+0x04463324  add     ebp, ebx
+0x04463B24  mov     edi, 9E005299h
+0x04464324  cli
+0x04464B24  loop    near ptr dword_4464B24+76h
+0x04465324  xchg    bl, [esi+edx*4-190F5381h]
+0x04465B24  in      al, dx
+0x04466324  mov     ch, 0B3h
+0x04466B24  fild    dword ptr ds:9F87BCAh
+0x04467324  sub     [esi], edx
+0x04467B24  jmp     far ptr 4594h:9F52025Bh
+0x04468324  sbb     dl, ah
+0x04468B24  mov     esi, 8D4FA1CAh
+0x04469324  sbb     [eax+ebp*8], bl
+0x04469B24  sub     eax, 736F07BBh
+0x0446A324  sbb     [edx], al
+0x0446AB24  xchg    eax, ebx
+0x0446B324  dec     eax
+0x0446BB24  fcmovnbe st, st(5)
+0x0446C324  add     esi, ecx
+0x0446CB24  mov     esi, ebx
+0x0446D324  das
+0x0446DB24  add     ch, al
+0x0446E324  icebp
+0x0446EB24  xchg    eax, ebx
+0x0446F324  sbb     ebx, [edx+26h]
+0x0446FB24  mov     dh, dl
+0x04470324  sub     eax, 20C2ACB3h
+0x04470B24  mov     cl, 1
+0x04471324  dec     ebx
+0x04471B24  cmp     al, 25h ; '%'
+0x04472324  retn    3023h
+0x04472B24  mov     eax, ds:112109C7h
+0x04472C70  imul    dword ptr [ebx]
+0x04472C72  xor     eax, 0CA769763h
+0x04472C78  push    edx
+0x04472C79  int     3; Trap to Debugger
+0x04472C7A  mov     dh, 4Ah ; 'J'
+0x04472C7C  retf
+0x04472C7D  out     dx, al
+0x04472C80  inc     eax
+0x04473480  inc     eax
+0x04473C80  cmp     bh, [edi+edx*2]
+0x04474480  cwde
+0x04474B40  mov     al, 2
+0x04474B44  jg      short near ptr dword_4474480+69Fh
+0x04475344  sub     eax, 0CEF2DB63h
+0x04475B44  dec     edi
+0x04476344  and     ah, [edi]
+0x04476B44  dec     esi
+0x04477344  stc
+0x04477B44  xchg    eax, edi
+0x04478344  pop     ebx
+0x04478B44  shl     esp, cl
+0x04479344  fcmovne st, st(3)
+0x04479B44  repne fmul dword ptr [esi+25h]
+0x0447A344  jg      short near ptr dword_4479B44+7E4h
+0x0447AB44  cmp     ah, al
+0x0447B344  sub     bh, [eax+1Ch]
+0x0447BB44  pusha
+0x0447C344  or      cl, [ecx]
+0x0447CB44  jbe     short near ptr dword_447CB44+3Fh
+0x0447D344  insb
+0x0447DB44  les     esi, [edi-2Bh]
+0x0447E344  repne add al, 22h ; '"'
+0x0447E490  dec     esp
+0x0447EC90  mov     ch, 0D0h
+0x0447F440  nop
+0x0447F444  add     ch, bh
+0x0447FC44  and     eax, ebx
+0x04480444  rcr     dword ptr [ecx+6Ah], cl
+0x04480C44  push    eax
+0x04481444  xor     edx, edi
+0x04481C44  jno     short near ptr dword_4481444+7DDh
+0x04482000  jmp     short near ptr dword_4482000+60h
+0x04482800  pop     ecx
+0x04483000  dec     ebx
+0x04483800  scasd
+0x04484000  clc
+0x04484800  sal     al, cl
+0x04485000  dd 8C80A9FEh, 6520E30Bh, 42DE2D05h, 0D1734A4h, 0A1A52DFCh
+0x044857F0  jg      short near ptr dword_4485000+772h
+0x044857F2  std
+0x044857F6  pushf
+0x044857F8  jmp     short near ptr dword_44857F8+36h
+0x04485FF8  hlt
+0x044867F8  and     eax, 0BC481E59h
+0x04486FF8  sbb     [edx+ebx*4-6], bl
+0x044877F8  inc     edx
+0x04487FF8  or      eax, 0F26A687Eh
+0x044887F8  xor     ebx, edi
+0x04488FF8  sub     [edx], esi
+0x044897F8  add     al, 6Eh ; 'n'
+0x04489FF8  sub     eax, ecx
+0x0448A7F8  xor     bl, [edx+1CC26CC8h]
+0x0448AFF8  daa
+0x0448B7F8  les     esi, [ebp-0CF77344h]
+0x0448BFF8  repne push ds
+0x0448C7F8  push    ebp
+0x0448CFF8  mov     bl, 94h
+0x0448D7F8  xor     bl, bl
+0x0448D828  inc     eax
+0x0448D82C  fnstenv byte ptr [esi-4414E8C3h]
+0x0448E02C  xchg    eax, ebx
+0x0448E82C  fstp    dword ptr [eax]
+0x0448F02C  cmp     al, 92h
+0x0448F82C  inc     edx
+0x0449002C  outsb
+0x0449082C  sti
+0x0449102C  or      edi, ebp
+0x0449182C  cmp     eax, 0C280F8A9h
+0x0449202C  scasd
+0x0449282C  xchg    al, [ebx]
+0x0449302C  xor     esi, ebx
+0x0449382C  test    al, 7
+0x0449402C  xor     al, 0AFh
+0x0449482C  pop     eax
+0x0449502C  push    cs
+0x0449582C  inc     ebp
+0x0449602C  lahf
+0x0449682C  adc     al, 0C7h
+0x0449702C  dec     edx
+0x0449782C  mov     esi, 4E9C4A0Bh
+0x0449802C  mov     ebp, ds:954C94FDh
+0x0449882C  aas
+0x0449902C  imul    ecx, 4A82D16Eh
+0x0449982C  imul    esp, [edi], 62B0E1Dh
+0x0449A02C  dec     eax
+0x0449A82C  jmp     short near ptr dword_449A82C+60h
+0x0449B02C  scasb
+0x0449B82C  sub     [ebx], bh
+0x0449C02C  or      esi, [eax-7D27DEF5h]
+0x0449C82C  mov     bl, 0A4h
+0x0449D02C  xchg    eax, edx
+0x0449D82C  dd 299460FEh, 0C64E21DEh, 5EC76FD8h, 0E3898C58h, 0B57B16B7h
+0x0449E02C  mov     eax, ds:6601AC9Bh
+0x0449E82C  sub     eax, 0BEFBA23Ch
+0x0449F02C  ja      short near ptr dword_449F02C+31h
+0x0449F82C  add     eax, 7E10945h
+0x044A002C  out     0BAh, al
+0x044A082C  push    cs
+0x044A102C  xchg    eax, edi
+0x044A182C  loopne  near ptr dword_44A182C+15h
+0x044A202C  dec     eax
+0x044A282C  les     eax, [edx+ebp*4]
+0x044A302C  xor     ecx, [esi+1CE0BFB2h]
+0x044A382C  outsb
+0x044A402C  sal     byte ptr [edi-0BD6D27Ch], cl
+0x044A482C  or      al, 0F7h
+0x044A502C  shl     byte ptr [ebp-4D4DC33Ch], 93h
+0x044A5384  inc     eax
+0x044A5385  jmp     fword ptr [edi+3]
+0x044A5388  jmp     near ptr 0A23EF887h
+0x044A5B88  xor     [eax], ebx
+0x044A6388  cli
+0x044A6B88  adc     al, bl
+0x044A7388  jmp     near ptr 21425216h
+0x044A7B88  and     al, 40h ; '@'
+0x044A8388  in      eax, dx
+0x044A8438  pusha
+0x044A843C  fld     tbyte ptr [ecx-3100DEC5h]
+0x044A8C3C  call    near ptr 0DEA2BB29h
+0x044A943C  or      eax, 0FB30A512h
+0x044A9C3C  sbb     al, 92h
+0x044AA43C  sub     [ecx], ecx
+0x044AAC3C  sub     eax, esi
+0x044AB43C  fdivr   dword ptr [edi-74h]
+0x044ABC3C  mov     ecx, esi
+0x044AC43C  pop     esi
+0x044ACC3C  or      ebx, edi
+0x044AD43C  int     3
+0x044ADC3C  call    near ptr 0DB6CA21Bh
+0x044AE43C  or      dword ptr [ecx], 0CC023E00h
+0x044AEC3C  rcr     esi, 1
+0x044AF43C  jmp     fword ptr [ecx]
+0x044AFC3C  mov     eax, [esi]
+0x044B043C  mov     ds:16D72712h, eax
+0x044B0C3C  push    ds
+0x044B143C  and     [ecx], bh
+0x044B1C3C  rcl     bl, cl
+0x044B243C  jmp     short near ptr dword_44B243C+64h
+0x044B2C3C  popf
+0x044B343C  xor     eax, 0D12BE27Bh
+0x044B3C3C  mov     cl, 64h ; 'd'
+0x044B443C  pop     ss
+0x044B4C3C  loope   near ptr dword_44B4C3C+70h
+0x044B543C  and     [edx], bh
+0x044B5C3C  jz      short near ptr dword_44B543C+7A7h
+0x044B643C  jnb     short near ptr dword_44B5C3C+7A4h
+0x044B6C3C  lds     edx, [edi-468642D2h]
+0x044B743C  clc
+0x044B7C3C  mov     ch, 0F6h
+0x044B843C  into
+0x044B8C3C  dd 3BCBDEC7h, 0FE81B15Eh, 0FEB49443h, 27BCFC64h, 6C6F6CBh
+0x044B943C  mov     ebp, 51318944h
+0x044B9C3C  jno     short near ptr dword_44B9C3C+74h
+0x044BA43C  add     eax, edx
+0x044BAC3C  adc     [esi-16B0775Ah], bh
+0x044BAF28  mov     al, ds:0A5013561h
+0x044BAF2C  movsd
+0x044BB72C  sub     [esi-77h], ah
+0x044BBF2C  push    ebp
+0x044BC72C  out     dx, al
+0x044BCF2C  inc     ebp
+0x044BD72C  imul    eax, esp, -3Dh
+0x044BDF2C  add     ecx, [ecx]
+0x044BE72C  pop     ebx
+0x044BEF2C  xchg    ebp, ds:93239457h
+0x044BF72C  pop     es
+0x044BFF2C  pop     edi
+0x044C072C  cmp     edi, 6FE9D30h
+0x044C0F2C  out     24h, eax ; '$'
+0x044C172C  int     0Fh
+0x044C1F2C  stosd
+0x044C272C  adc     eax, [esi-42h]
+0x044C2F2C  xchg    eax, ebx
+0x044C372C  xor     esi, 0CA314381h
+0x044C3F2C  or      bh, ch
+0x044C472C  push    es
+0x044C4F2C  add     dh, 1Fh
+0x044C572C  or      ecx, [edi+ebx*2]
+0x044C5F2C  shr     byte ptr [ecx], 1
+0x044C672C  in      al, 0FEh
+0x044C6F2C  in      eax, 5Bh ; '['
+0x044C772C  inc     eax
+0x044C7F2C  add     al, 0ECh
+0x044C872C  mov     ebp, 5F75A5h
+0x044C8F2C  in      al, 27h ; '''
+0x044C972C  xchg    eax, ebp
+0x044C9F2C  or      [esi+9], ah
+0x044CA72C  cdq
+0x044CAF2C  not     dword ptr [esi+35h]
+0x044CB72C  jp      short near ptr dword_44CAF2C+782h
+0x044CBF2C  mov     esp, 7255AF2Bh
+0x044CC72C  adc     eax, esi
+0x044CCF2C  sub     [ecx-3Eh], dl
+0x044CD72C  jnp     short near ptr dword_44CD72C+2Eh
+0x044CDF2C  pop     ebx
+0x044CE72C  dec     edx
+0x044CEF2C  sar     dword ptr [edi], 1
+0x044CF72C  cmpsb
+0x044CFF2C  mov     ah, 0E8h
+0x044D072C  push    ebp
+0x044D0F2C  cmp     eax, 0DBE9CBDDh
+0x044D172C  neg     byte ptr [esi]
+0x044D1F2C  dd 0C675DAFFh, 21A1A73Ch, 0C4FA68C6h, 0D9BE3B03h, 0CD212E35h
+0x044D272C  mov     [edx+45h], ebp
+0x044D2F2C  adc     bh, ch
+0x044D372C  pop     dword ptr [eax]
+0x044D3F2C  mov     [ecx], ebx
+0x044D472C  push    ss
+0x044D4F2C  jmp     dword ptr [edi]
+0x044D572C  cli
+0x044D5F2C  loope   near ptr dword_44D5F2C+42h
+0x044D672C  test    eax, 1A8003F4h
+0x044D6F2C  js      short near ptr dword_44D672C+7EDh
+0x044D772C  adc     esp, edx
+0x044D7F2C  add     dl, dl
+0x044D872C  pusha
+0x044D8F2C  xchg    eax, ebx
+0x044D972C  mov     edx, 940C388Ah
+0x044D9F2C  loope   near ptr dword_44D972C+7FEh
+0x044DA72C  add     [ecx-3CFE7F86h], ah
+0x044DAF2C  daa
+0x044DB72C  jmp     short near ptr dword_44DB72C+31h
+0x044DBF2C  push    cs
+0x044DC72C  sbb     [edx+4060A2C1h], ch
+0x044DCF2C  cld
+0x044DD72C  mov     edi, 0BE92C38Ah
+0x044DDF2C  inc     ebx
+0x044DE72C  and     [edi-7B684329h], ah
+0x044DEF2C  jmp     far ptr 8A70h:22987106h
+0x044DF72C  sbb     dh, [edi]
+0x044DFF2C  jl      short near ptr dword_44DFF2C+4Dh
+0x044E072C  mov     bh, 0C8h
+0x044E0F2C  in      al, 3
+0x044E172C  dd 8CB0E5DFh, 0F0263933h, 0FB562B2Dh, 38018B14h, 0FB8450C5h
+0x044E1F2C  mov     cl, 0EAh
+0x044E272C  or      al, 9Eh
+0x044E2F2C  mov     dl, 86h
+0x044E34A8  pusha
+0x044E34AC  cmpsd
+0x044E34B0  mov     edx, 0FD1BCA28h
+0x044E3CB0  test    al, 7
+0x044E44B0  icebp
+0x044E4CB0  daa
+0x044E54B0  jl      short near ptr dword_44E54B0+67h
+0x044E5CB0  out     dx, eax
+0x044E64B0  mov     bl, 0E1h
+0x044E6CB0  setalc
+0x044E7328  shl     byte ptr [edi+0], 1Fh
+0x044E732C  xor     [edi-35h], bh
+0x044E7B2C  out     0EEh, eax
+0x044E832C  and     al, al
+0x044E88E4  enter   59D3h, 3
+0x044E88E8  stc
+0x044E88EC  mov     dh, 0B2h
+0x044E90EC  cld
+0x044E98EC  mov     esp, 0DCF1B56Ah
+0x044EA0EC  mov     eax, ds:917D14F0h
+0x044EA8EC  pop     eax
+0x044EB0EC  or      eax, 0D28090A7h
+0x044EB8EC  push    edx
+0x044EBD98  insd
+0x044EC598  mov     ecx, 360FA9Ch
+0x044ECD98  jnz     short near ptr dword_44EC598+7DEh
+0x044ED598  sbb     [ebp-41C083DBh], ch
+0x044EDD98  sub     [ebx], bl
+0x044EE598  mov     bl, 44h ; 'D'
+0x044EED98  insb
+0x044EF18C  int     50h ; 'P'
+0x044EF18D  int     50h ; 'P'
+0x044EF190  adc     [ebx+9], dh
+0x044EF990  shr     bl, 0ECh
+0x044F0190  push    ss
+0x044F0990  add     [ecx-50h], ebp
+0x044F0E08  mov     al, ds:680127BEh
+0x044F0E0C  push    3408BECFh
+0x044F160C  add     ebp, [ebx]
+0x044F160E  jmp     fword ptr [ecx-65A9051Ah]
+0x044F1614  pop     esp
+0x044F1E14  dec     ecx
+0x044F2614  xchg    eax, ebx
+0x044F2C10  pusha
+0x044F2C11  clc
+0x044F2C12  lidt    fword ptr [ebp+280F5586h]
+0x044F2C19  stosd
+0x044F2C1A  pop     dword ptr [eax]
+0x044F2C1C  dec     ecx
+0x044F2C1D  loope   loc_44F2C1C
+0x044F2C1F  jmp     short loc_44F2C4E
+0x044F2C21  push    ss
+0x044F2C24  icebp
+0x044F2C4C  mov     ds:64A7C040h, al
+0x044F2C4E  shl     byte ptr [edi-2627EE9Ch], 0FBh
+0x044F2C55  shr     byte ptr [esi-2], 5Fh
+0x044F2C59  retn
+0x044F2C5A  popf
+0x044F2C5C  xchg    ah, al
+0x044F345C  lea     eax, [edx]
+0x044F3C5C  stosd
+0x044F445C  xor     [ebp-0Dh], esp
+0x044F4C5C  cmp     dword ptr [eax+17h], 96D514BAh
+0x044F545C  and     [edx-29h], ebx
+0x044F5C5C  ja      short near ptr dword_44F5C5C+14h
+0x044F645C  mov     ebp, 0B10895E7h
+0x044F6C5C  jmp     dword ptr [edi]
+0x044F745C  rol     byte ptr [ebx], 1
+0x044F7C5C  in      eax, dx
+0x044F845C  shr     byte ptr [edx], 0B4h
+0x044F8C5C  clc
+0x044F945C  cmpsd
+0x044F9C5C  or      esi, edx
+0x044FA45C  insb
+0x044FAC5C  adc     byte ptr [ecx], 26h ; '&'
+0x044FB45C  add     [edi+1B9489CDh], ch
+0x044FBC5C  add     al, 0DFh
+0x044FC45C  add     [edx-4F839A7Bh], al
+0x044FCC5C  add     [esi+3D2C119Ch], cl
+0x044FD000  int     3
+0x044FD001  pop     es
+0x044FD004  pop     es
+0x044FD804  jb      short near ptr dword_44FD804+45h
+0x044FE004  cmp     esi, edx
+0x044FE804  add     ah, cl
+0x044FF004  imul    ah
+0x044FF804  jge     short near ptr dword_44FF804+4Dh
+0x04500004  pushf
+0x04500804  mov     [ebx+78h], bh
+0x04501004  repne cmpsb
+0x04501804  psignb  mm6, qword ptr [ecx]
+0x04502004  cmp     dl, [eax+1Ah]
+0x04502804  adc     al, ah
+0x04503004  cmp     ds:482B8030h, cl
+0x04503804  dec     eax
+0x04504004  mov     eax, ds:0C095AEE7h
+0x04504804  mov     al, ds:0DB24F207h
+0x04505004  xor     [ecx], al
+0x04505804  rcl     byte ptr [eax], 1
+0x04506004  pop     edx
+0x04506804  inc     ebx
+0x04507004  sub     [edx], eax
+0x04507804  mov     dl, 0E5h
+0x04508004  daa
+0x04508804  mov     byte ptr loc_C5C299, al
+0x04509004  sbb     byte ptr [eax+36CF7Ah], 83h
+0x045090B4  add     [eax+24h], dl
+0x045090B8  fldenv  byte ptr [ecx-557DC9Dh]
+0x045098B8  dd 528BC3C4h, 0B100CEF4h, 0F178D010h, 2D06F5h, 489BDCD6h
+0x0450A0B8  mov     eax, ds:3EB81F5Eh
+0x0450A8B8  cmp     esi, [edx+ebx*8-80h]
+0x0450B0B8  dd 0AC780A0Fh, 27437D2Dh, 0F0B54D48h, 3A11DAB9h, 0E301EABDh
+0x0450B8B8  pop     es
+0x0450C0B8  push    0C609BC0h
+0x0450C8B8  pop     edx
+0x0450D0B8  add     [edx+edx-2DC200F3h], ah
+0x0450D8B8  aaa
+0x0450E0B8  jmp     short near ptr dword_450D8B8+78Ah
+0x0450E8B8  xchg    eax, edx
+0x0450F0B8  jnb     short near ptr dword_450E8B8+7B1h
+0x0450F8B8  psubq   mm7, qword ptr [edi-56h]
+0x045100B8  add     [eax+4A54E1E4h], ah
+0x045108B8  sbb     eax, 0C1D5A252h
+0x045110B8  lock jecxz short near ptr dword_45108B8+7A9h
+0x045118B8  sub     dl, [edx+41h]
+0x045120B8  pop     ds
+0x045128B8  add     cl, ch
+0x04512B38  add     byte ptr [esi-5693FEDEh], 0C8h
+0x04512B3C  insb
+0x0451333C  add     ds:487DE681h, al
+0x04513B3C  mov     ch, 0E2h
+0x0451433C  div     dword ptr [ebx+eax-0Dh]
+0x04514B3C  sub     eax, 0B0E366D9h
+0x0451533C  and     [edx-66h], edx
+0x04515B3C  jmp     near ptr 70B75C3Fh
+0x0451633C  adc     eax, 9BBB6100h
+0x04516B3C  pop     edx
+0x0451733C  add     [esi], ch
+0x04517B3C  pop     esi
+0x0451833C  jge     short near ptr dword_451833C+7Bh
+0x04518B3C  xchg    eax, edi
+0x0451933C  add     [ecx-48273002h], cl
+0x04519B3C  wait
+0x0451A33C  push    eax
+0x0451AB3C  fnstcw  word ptr [esi+52h]
+0x0451B33C  add     al, 0Bh
+0x0451BB3C  loope   near ptr dword_451B33C+7EAh
+0x0451C1E8  in      eax, 0F0h
+0x0451C1E9  lock aas
+0x0451C1EC  jmp     near ptr 2351EF6Eh
+0x0451C9EC  icebp
+0x0451D1EC  cwde
+0x0451D9EC  cmp     [eax], eax
+0x0451E1EC  add     [esi], bl
+0x0451E9EC  dec     esi
+0x0451F1EC  xor     ch, al
+0x0451F9EC  sub     [ecx-4DD49717h], esi
+0x045201EC  pop     ebp
+0x045209EC  rol     dword ptr [eax+643803BAh], 1
+0x045211EC  jnb     short near ptr dword_45209EC+7A6h
+0x045219EC  sub     ah, [eax+58h]
+0x045221EC  repne retf 8EFh
+0x045229EC  or      edx, [ecx+44120B50h]
+0x04522E34  and     byte ptr [edx+56h], 3
+0x04522E38  dd 655AFD8Ch, 2CD967BBh, 0F9A39038h, 0D7001FD8h, 0B987C3EEh
+0x04523638  mov     byte ptr ds:dword_41FD014+184h, al
+0x04523E38  aam     0B6h
+0x04524638  dec     esi
+0x04524D98  xor     [edi+eax-559FD2FDh], ch
+0x04524D9C  sub     eax, 2083AA60h
+0x0452559C  mov     cl, 95h
+0x04525D9C  insb
+0x0452659C  arpl    [ecx+60FCB05Fh], cx
+0x04526D9C  daa
+0x0452759C  push    eax
+0x04527D9C  xchg    cl, [ebx+5Fh]
+0x0452859C  xchg    eax, ebx
+0x04528D9C  and     al, dl
+0x0452959C  push    edi
+0x04529D9C  test    [ebx+1Ch], cl
+0x0452A59C  and     [edx-3Ch], edx
+0x0452AD9C  leave
+0x0452B59C  test    [edx+45D307A9h], ebp
+0x0452BD9C  push    edi
+0x0452C59C  lds     ecx, [eax]
+0x0452CD9C  cwde
+0x0452D59C  sub     ch, ah
+0x0452DD9C  add     [eax-60D24F0Bh], dh
+0x0452E59C  add     [ebx-3F5A7CCDh], dh
+0x0452ED9C  mov     dh, 42h ; 'B'
+0x0452F59C  arpl    sp, di
+0x0452FD9C  icebp
+0x0453059C  jge     short near ptr dword_452FD9C+7B5h
+0x04530D9C  sub     ebp, eax
+0x0453159C  mov     dh, 0C5h
+0x045319EC  and     [edi+0], ch
+0x045319F0  mov     [edx], ch
+0x045321F0  inc     edi
+0x045329F0  cmp     al, 6Ah ; 'j'
+0x045331F0  add     edi, esi
+0x045339F0  adc     al, 0B9h
+0x045341F0  sub     [edi], bl
+0x045349F0  in      eax, dx
+0x045351F0  les     ecx, [edi+ebp]
+0x045359F0  push    edi
+0x045361F0  push    ebx
+0x045369F0  sub     bl, ah
+0x045371F0  mov     ah, [eax+0Bh]
+0x045379F0  sub     al, 0D8h
+0x045381F0  and     [esi], ebx
+0x045389F0  out     16h, al
+0x045391F0  jmp     near ptr 0EC610574h
+0x045399F0  dec     eax
+0x0453A1F0  sub     [edi+68h], bh
+0x0453A9F0  fbstp   tbyte ptr [edx+ebp*8+76492BB4h]
+0x0453B1F0  neg     ecx
+0x0453B9F0  xchg    eax, edi
+0x0453C1F0  not     dword ptr [ebp-608B4323h]
+0x0453C9F0  rcl     dword ptr [edx+74B63A30h], 0BBh
+0x0453D1F0  jnp     short near ptr dword_453D1F0+4Eh
+0x0453D9F0  fidivr  dword ptr [esi+42C932A2h]
+0x0453E1F0  retn
+0x0453E9F0  cmpsd
+0x0453F1F0  insb
+0x0453F9F0  pop     edx
+0x045401F0  in      al, dx
+0x045409F0  int     9Eh
+0x045411F0  insd
+0x045419F0  jmp     near ptr 0AFFE2298h
+0x045421F0  cli
+0x045429F0  pusha
+0x045431F0  ror     byte ptr [esi-1BE33AB8h], 1
+0x045439F0  push    ds
+0x045441F0  xor     al, 0Ah
+0x045449F0  mov     eax, 0F5024652h
+0x045451F0  xor     eax, 0DE112E7h
+0x045459F0  retf    0A32Eh
+0x045461F0  adc     cl, [ecx+28h]
+0x045469F0  aaa
+0x045471F0  add     bl, bh
+0x045479F0  cld
+0x045481F0  xor     bl, [eax]
+0x045489F0  mul     dh
+0x045491F0  retn    1A76h
+0x045499F0  pop     ebp
+0x0454A1F0  inc     eax
+0x0454A9F0  jecxz   short near ptr dword_454A1F0+7A5h
+0x0454B1F0  xchg    eax, esp
+0x0454B9F0  add     [ebx+eax*4-49h], cl
+0x0454C1F0  out     0F4h, eax
+0x0454C9F0  push    56h ; 'V'
+0x0454D1F0  cmp     al, 54h ; 'T'
+0x0454D9F0  mov     dh, 7Ch ; '|'
+0x0454E1F0  mul     byte ptr [eax]
+0x0454E9F0  lds     eax, [ecx-78h]
+0x0454F1F0  and     [eax+ebx+4BE471A7h], ebp
+0x0454F9F0  mov     ebx, 7C04142Eh
+0x045501F0  sbb     al, 0A5h
+0x045509F0  cmp     eax, 0E6DDAA30h
+0x045511F0  out     38h, al ; '8'
+0x045519F0  dec     ecx
+0x045521F0  add     ebx, [ebp+50516574h]
+0x045529F0  and     [eax+3Eh], ah
+0x045531F0  mov     ch, 0C0h
+0x045539F0  xor     al, 0F1h
+0x045541F0  sal     ebp, cl
+0x045549F0  cmp     dh, cl
+0x045551F0  sbb     cl, 0F8h
+0x045559F0  pop     ebp
+0x045561F0  mov     cl, 8
+0x045568B0  inc     eax
+0x045568B4  push    es
+0x045570B4  test    al, 0A2h
+0x045578B4  adc     cl, [edx+51h]
+0x045580B4  dd 98FBF28Dh, 33044A71h, 0AE25660Ch, 7C77429Ch, 3E961381h
+0x045588B4  pop     esi
+0x045590B4  jo      short near ptr dword_45588B4+7C2h
+0x045598B4  jmp     far ptr 0E709h:4A2331E0h
+0x0455A0B4  stosd
+0x0455A8B4  mov     ch, [bp+di]
+0x0455B0B4  test    eax, 39D016E2h
+0x0455B870  loopne  near ptr dword_455B0B4+748h
+0x0455B874  or      [ecx+0Ch], edi
+0x0455C074  add     byte ptr [esi+0B32C328h], 0D7h
+0x0455C874  jnz     short near ptr dword_455C874+5Ch
+0x0455D074  hlt
+0x0455D874  insb
+0x0455E074  add     dl, [ebx+68h]
+0x0455E874  cmp     eax, 0A0D529CFh
+0x0455F074  pop     esp
+0x0455F874  adc     bh, [ecx+0Fh]
+0x04560074  jo      short near ptr dword_4560074+5Eh
+0x04560874  add     [esi+50A2BB10h], ecx
+0x04561074  pop     esp
+0x04561874  call    near ptr 0D09862D0h
+0x04562074  adc     eax, 0F8EEEE3h
+0x04562874  push    cs
+0x04563074  push    edi
+0x04563874  call    near ptr 70DA500Ch
+0x04564074  movsd
+0x04564874  jle     short near ptr dword_4564874+3
+0x04565074  dec     ecx
+0x04565874  push    eax
+0x04566074  aas
+0x04566874  cmc
+0x04566CDC  add     ch, dl
+0x04566CE0  push    ebx
+0x045674E0  pop     edi
+0x04567CE0  adc     al, [esi+40h]
+0x045684E0  hlt
+0x04568CE0  dd 2FE63DFFh, 7D5C0D9Ah, 5FE64Bh, 77685257h, 9403E1E0h
+0x045694E0  sub     byte ptr [eax], 7Fh
+0x04569CE0  jg      short near ptr dword_4569CE0+59h
+0x0456A4E0  inc     esi
+0x0456ACE0  dec     esi
+0x0456B4E0  mov     cl, 1Bh
+0x0456BCE0  fstp    tbyte ptr [edi+40h]
+0x0456C4E0  pop     es
+0x0456CCE0  xor     [esi], edx
+0x0456D4E0  cmp     [ebp-57FDD85Fh], bh
+0x0456DCE0  in      al, dx
+0x0456E4E0  aaa
+0x0456ECE0  jnp     short near ptr dword_456ECE0+1Dh
+0x0456F4E0  sal     byte ptr [esi+60h], cl
+0x0456FC8C  mov     [edx+20C34031h], al
+0x0456FC8D  xor     byte ptr [ecx], 40h
+0x0456FC90  retn
+0x0456FC91  and     [ecx-6CC62A39h], cl
+0x0456FC94  aad     39h ; '9'
+0x04570058  jb      short near ptr dword_456FC94+3C2h
+0x04570059  jb      short near ptr dword_456FC94+3C2h
+0x0457005C  sub     ebx, ebx
+0x0457085C  mov     dh, 17h
+0x0457105C  or      al, 87h
+0x0457185C  aad     0E1h
+0x0457205C  iret
+0x0457285C  and     ah, 0CFh
+0x0457305C  test    dword ptr [eax+0EA03458h], 0A09B71E4h
+0x0457385C  dec     esp
+0x0457405C  dec     edi
+0x0457485C  xor     esi, eax
+0x0457505C  out     dx, al
+0x0457585C  retf    5904h
+0x0457605C  sbb     al, 0B3h
+0x0457685C  pop     ds
+0x0457705C  sbb     al, 53h ; 'S'
+0x0457785C  in      eax, 4
+0x0457805C  mov     esi, 0F948259Bh
+0x0457885C  imul    ebp, [ecx+69h], 23D50B8Ch
+0x0457905C  jb      short near ptr dword_457905C+16h
+0x0457985C  and     bh, bh
+0x0457A05C  movsd
+0x0457A85C  jge     short near ptr dword_457A85C+5
+0x0457AC84  sbb     dl, 69h ; 'i'
+0x0457AC87  les     ebx, [esi+edx*8+67h]
+0x0457AC88  pop     esp
+0x0457B488  sub     [edx-5Dh], ecx
+0x0457BC88  lahf
+0x0457C488  sbb     eax, 840ED0h
+0x0457CC88  mov     al, 0A5h
+0x0457D488  outsd
+0x0457DC88  or      ebx, [ebx-415F8981h]
+0x0457E488  jmp     near ptr 0A085F978h
+0x0457EC88  fistp   word ptr [edi-481349A1h]
+0x0457F488  mov     eax, 0B0BB30BEh
+0x0457FC88  daa
+0x04580488  sti
+0x04580C88  cmp     al, 91h
+0x04581488  enter   7856h, 3Ah ; ':'
+0x04581C88  push    ebx
+0x04582488  pop     ebp
+0x04582C88  push    esp
+0x04583488  sbb     byte ptr [eax-2FD0E8DBh], 18h
+0x04583C88  push    edi
+0x04584488  fild    qword ptr [esi-15h]
+0x04584C88  push    edx
+0x04585488  aas
+0x04585C88  add     ch, cl
+0x04585FBC  push    edx
+0x04585FBF  fsub    dword ptr [esi+2B03456Ah]
+0x04585FC0  cmpsb
+0x04585FC4  sub     esp, [edi+36h]
+0x045867C4  or      eax, [esi+7B689C01h]
+0x045869AC  loopne  near ptr dword_45867C4+194h
+0x045869B0  fstp    tbyte ptr [ebx+0Ch]
+0x045871B0  pop     es
+0x045879B0  jns     short near ptr dword_45879B0+6Eh
+0x045881B0  add     eax, 6CD4CA36h
+0x045889B0  mov     al, 0DFh
+0x045891B0  mov     ch, 0DBh
+0x045899B0  setalc
+0x0458A1B0  popf
+0x0458A92C  and     [edi+15h], dh
+0x0458A930  mov     esi, 0D4D5E492h
+0x0458B130  scasd
+0x0458B930  loop    near ptr dword_458B130+7CDh
+0x0458C130  test    [edi], ah
+0x0458C930  or      dword ptr [edx+7A14F299h], 5086F8E3h
+0x0458D130  out     dx, al
+0x0458D930  push    esp
+0x0458E130  push    edx
+0x0458E930  fist    dword ptr [ecx+27h]
+0x0458F130  mov     esi, 0FEE334A5h
+0x0458F930  push    ss
+0x04590130  push    di
+0x04590930  pushf
+0x04591130  pop     es
+0x04591930  inc     byte ptr [eax+ebp*4+30h]
+0x04592130  cmpsd
+0x04592930  pop     ss
+0x04593130  fldenv  byte ptr [edi]
+0x04593930  xchg    eax, ecx
+0x04594130  dd 0EE6014FEh, 81FB7A34h, 0FEE460DEh, 5FEF5100h, 8105E2C1h
+0x04594930  add     [ebp+24h], eax
+0x04595130  cmp     eax, 1986E194h
+0x04595930  jmp     far ptr 86AFh:7C98596Ch
+0x04596130  popa
+0x04596930  or      [edi-7Dh], edi
+0x04597130  add     eax, 744E8424h
+0x04597930  out     dx, al
+0x04598130  jmp     short near ptr dword_4598130+11h
+0x04598930  movsd
+0x04599130  mov     esp, 4C03B457h
+0x04599930  push    esi
+0x0459A130  clc
+0x0459A930  and     al, 3Ch ; '<'
+0x0459B130  sub     [eax+44h], ecx
+0x0459B930  les     ebp, [edi]
+0x0459C130  dec     ecx
+0x0459C930  add     eax, 0EA5695E9h
+0x0459D130  sal     byte ptr [eax+64008D91h], 2Dh ; '-'
+0x0459D930  jl      short near ptr dword_459D930+6
+0x0459E130  sbb     al, 8Ch
+0x0459E930  jmp     near ptr 0BA059420h
+0x0459F130  xchg    eax, esp
+0x0459F930  jl      short near ptr dword_459F930+64h
+0x045A0130  mov     ebx, [eax+7F56471Eh]
+0x045A0930  dd 0C67C27DBh, 0B7405D90h, 0E8AA309Eh, 0F0849C24h, 440CE761h
+0x045A1130  mov     bh, 9Eh
+0x045A1930  ja      short near ptr dword_45A1130+798h
+0x045A2130  pop     ds
+0x045A2930  dd 8360FCDDh, 0DC352880h, 14BFF6C4h, 988C8296h, 53983Eh
+0x045A3130  add     [ebx], ch
+0x045A3930  sar     byte ptr [eax-6DF61D84h], cl
+0x045A4130  sbb     al, 8Ch
+0x045A4930  enter   6D4h, 72h ; 'r'
+0x045A4D50  add     cl, bh
+0x045A4D54  jno     short near ptr dword_45A4930+3A9h
+0x045A5554  sbb     dword ptr [esi], 4246CFC9h
+0x045A5D54  mov     [edi+44315E47h], edi
+0x045A6554  dec     ebx
+0x045A6D54  push    ss
+0x045A7554  pop     ebp
+0x045A7774  sal     byte ptr [eax+ebp+1], 0A0h
+0x045A7778  mov     al, ds:0D639C137h
+0x045A7EAC  or      byte ptr [ebp+28h], 3
+0x045A7EB0  push    ebp
+0x045A86B0  jl      short near ptr dword_45A86B0+6Fh
+0x045A8EB0  or      al, 24h ; '$'
+0x045A96B0  dd 7C1C51C7h, 6065F010h, 90902C4h, 6F1CEB88h, 0E1BD4690h
+0x045A9EB0  jb      short near ptr dword_45A96B0+785h
+0x045AA6B0  add     [ecx-7F255A74h], edx
+0x045AA9A4  inc     eax
+0x045AA9A8  add     [edx], al
+0x045AB1A8  into
+0x045AB9A8  lahf
+0x045AC1A8  call    near ptr 84941BECh
+0x045AC9A8  sub     al, 12h
+0x045AD1A8  out     dx, eax
+0x045AD9A8  xchg    bh, [edi-12h]
+0x045AE1A8  inc     esi
+0x045AE9A8  setnbe  byte ptr [eax+eax*8+6D8A432h]
+0x045AF1A8  int     74h ; 't'
+0x045AF9A8  jmp     short near ptr dword_45AF9A8+24h
+0x045B01A8  mov     dh, 2Dh ; '-'
+0x045B09A8  dec     edx
+0x045B11A8  inc     ebx
+0x045B19A8  fisttp  qword ptr [ebx+ebx*4]
+0x045B21A8  inc     eax
+0x045B29A8  int     3
+0x045B31A8  jg      short near ptr dword_45B31A8+2Ah
+0x045B39A8  adc     bl, cl
+0x045B41A8  mov     ah, 8Ah
+0x045B49A8  mov     es, word ptr [eax]
+0x045B51A8  rep jecxz short near ptr dword_45B51A8+13h
+0x045B59A8  insb
+0x045B61A8  mov     al, 0E6h
+0x045B69A8  mov     [ebp+590BA4E8h], edx
+0x045B71A8  lodsd
+0x045B79A8  push    ebp
+0x045B81A8  leave
+0x045B89A8  cwde
+0x045B91A8  sub     [eax+2Eh], al
+0x045B99A8  dd 3FEB32C6h, 4E12BA8Ah, 0E0D30046h, 0CB8896B1h, 7F81F102h
+0x045BA1A8  push    ecx
+0x045BA9A8  jge     short near ptr dword_45BA1A8+784h
+0x045BB1A8  mov     ebx, 899DCC91h
+0x045BB9A8  pop     ds
+0x045BC1A8  pop     esp
+0x045BC9A8  ficom   dword ptr [edx]
+0x045BD1A8  dec     ebx
+0x045BD9A8  call    near ptr 4AFB6905h
+0x045BE1A8  in      al, dx
+0x045BE9A8  ficom   dword ptr [esi]
+0x045BF1A8  retn    0A415h
+0x045BF9A8  out     80h, eax
+0x045C01A8  fldenv  byte ptr [ebp-777FF8DBh]
+0x045C09A8  into
+0x045C11A8  jno     short near ptr dword_45C11A8+39h
+0x045C19A8  aad     21h ; '!'
+0x045C21A8  cwde
+0x045C29A8  add     dword ptr [edx], 655EFCECh
+0x045C31A8  jg      short near ptr dword_45C29A8+7EFh
+0x045C39A8  inc     dword ptr [eax+763E4039h]
+0x045C4180  mov     al, 0F1h
+0x045C4184  inc     edx
+0x045C4984  dec     eax
+0x045C5184  pop     eax
+0x045C5984  jle     short near ptr dword_45C5984+11h
+0x045C6184  fcomp   dword ptr [eax]
+0x045C6984  jb      short near ptr dword_45C6184+782h
+0x045C7184  test    [esp+eax-71A0Ah], al
+0x045C7984  sub     dword ptr [edx], 0FFFFFFA3h
+0x045C8184  xor     al, 0B7h
+0x045C8984  push    ss
+0x045C9184  push    es
+0x045C9984  mov     dh, 0DEh
+0x045CA184  xor     eax, [esi]
+0x045CA984  pop     ebx
+0x045CB184  or      al, 37h ; '7'
+0x045CB984  and     al, [eax-7886F92Ah]
+0x045CC184  daa
+0x045CC984  jz      short near ptr dword_45CC184+7A0h
+0x045CD184  mov     eax, ds:0B1FE566Eh
+0x045CD984  inc     esi
+0x045CE184  insd
+0x045CE984  mov     esi, 1CB58D07h
+0x045CF184  inc     eax
+0x045CF764  add     [ecx+ecx*2+0], dl
+0x045CF768  mov     dl, 0E0h
+0x045CFF68  fidiv   dword ptr [edx+3]
+0x045D0768  mov     esp, 7A950038h
+0x045D0F68  sub     eax, 0BE7CE89Dh
+0x045D1768  mov     al, ds:268003D4h
+0x045D1F68  sub     [ebx+0Bh], ecx
+0x045D2258  add     al, 85h
+0x045D225C  dec     ebx
+0x045D2A5C  add     bl, dh
+0x045D325C  in      eax, 0AEh
+0x045D35AC  add     [ebx+25h], ah
+0x045D35B0  jp      short near ptr dword_45D325C+33Fh
+0x045D3DB0  fbstp   tbyte ptr [esp+edx*2-48h]
+0x045D45B0  or      [ecx], esi
+0x045D4DB0  lahf
+0x045D55B0  adc     byte ptr [edi-78h], 96h
+0x045D5DB0  or      [edx], al
+0x045D65B0  sub     dword ptr [esi-6Bh], 9C3244E4h
+0x045D6DB0  sbb     ebx, edi
+0x045D75B0  inc     edx
+0x045D7DB0  inc     ecx
+0x045D85B0  insb
+0x045D8DB0  xchg    esp, [edx+506F1F56h]
+0x045D95B0  mov     eax, 2A134454h
+0x045D9DB0  not     dword ptr [esi]
+0x045DA5B0  loop    near ptr dword_45D9DB0+78Fh
+0x045DADB0  pop     ecx
+0x045DB5B0  pop     esi
+0x045DBDB0  dec     esp
+0x045DC5B0  xchg    eax, esi
+0x045DCDB0  inc     ecx
+0x045DD354  or      [eax+586F037Ch], ah
+0x045DD358  outsd
+0x045DDB58  into
+0x045DE358  test    al, 0E2h
+0x045DEB58  xchg    ah, [ecx-31ED3A1Ch]
+0x045DF358  jp      short near ptr dword_45DF358+2Ch
+0x045DFB58  sub     eax, 0CA0D0700h
+0x045DFBA8  mov     edx, 371DA00Ah
+0x045DFBAA  mov     al, ds:0C135371Dh
+0x045DFBAC  aaa
+0x045E03AC  add     ss:[eax-3F9F1ABAh], cl
+0x045E0BAC  jg      short near ptr dword_45E03AC+7F2h
+0x045E13AC  pop     es
+0x045E1BAC  cli
+0x045E23AC  fmul    dword ptr ds:448037C5h
+0x045E2BAC  or      [edx+ebx-5D14E33Bh], ah
+0x045E33AC  push    3F1E46B2h
+0x045E3BAC  mov     cl, 97h
+0x045E43AC  xor     ebp, eax
+0x045E4BAC  add     cl, [ecx]
+0x045E53AC  add     dword ptr [ebx+eax+411B88F3h], 0FFFFFFCEh
+0x045E5BAC  and     [eax], bh
+0x045E62FC  pusha
+0x045E6300  inc     esp
+0x045E6B00  push    eax
+0x045E7300  mov     ebp, ebx
+0x045E7B00  aaa
+0x045E8300  fucompp
+0x045E8B00  ja      short near ptr dword_45E8B00+2Ah
+0x045E9300  pop     ds
+0x045E9B00  or      dword ptr [edx], 0FFFC6275h
+0x045EA300  push    esi
+0x045EAB00  or      cl, bh
+0x045EB300  and     [edx-52CB2F06h], al
+0x045EBB00  cld
+0x045EC300  clc
+0x045ECB00  add     edx, [edx]
+0x045ED234  clc
+0x045ED238  mov     ch, al
+0x045EDA38  jnz     short near ptr dword_45EDA38+64h
+0x045EE238  test    [ecx+5A5278DCh], dh
+0x045EEA38  push    ecx
+0x045EF238  or      [ecx+ebp*8], eax
+0x045EFA38  sbb     bh, al
+0x045F0238  jg      short near ptr dword_45EFA38+7D1h
+0x045F0A38  and     ds:3281F384h, ebx
+0x045F1238  jnz     short near ptr dword_45F0A38+783h
+0x045F1A38  dec     esp
+0x045F1CD0  add     [eax+8C80136h], dh
+0x045F1CD4  enter   6F08h, 0A7h
+0x045F24D4  mov     esi, 7E0C1FD2h
+0x045F2CD4  mul     byte ptr [esi+esi*8]
+0x045F34D4  pop     ss
+0x045F3CD4  jo      short near ptr dword_45F3CD4+7Fh
+0x045F44D4  movsd
+0x045F4CD4  xchg    eax, ebx
+0x045F54D4  xor     [esp+ebx], dh
+0x045F5CD4  add     [edx], al
+0x045F64D4  push    edi
+0x045F6CD4  sbb     eax, 7CE9BF18h
+0x045F74D4  and     ecx, [edi+67h]
+0x045F7CD4  int     55h ; 'U'
+0x045F84D4  add     eax, 4646C5Dh
+0x045F8CD4  stosd
+0x045F94D4  fld     qword ptr [esi+601B1480h]
+0x045F9CD4  movsd
+0x045FA4D4  popf
+0x045FACD4  dec     ecx
+0x045FB4D4  movsb
+0x045FBCD4  jmp     short near ptr dword_45FBCD4+58h
+0x045FC4D4  cwde
+0x045FCCD4  or      ch, bh
+0x045FCF44  sbb     byte ptr [esi+2288011Bh], 0F7h
+0x045FCF48  mov     [edx], ah
+0x045FD748  inc     esi
+0x045FDF48  add     [ecx+esi*4], bh
+0x045FE748  retn    4CD1h
+0x045FEF48  mov     word ptr [eax+63h], ss
+0x045FF748  cmp     [edx-75A9BCC0h], esi
+0x045FFF48  inc     esp
+0x04600000  cmpsb
+0x04600001  xlat
+0x04600002  retf
+0x04600003  popa
+0x04600007  mov     bl, 0D5h
+0x04600008  aad     0D9h
+0x04600038  push    esp
+0x0460003C  mov     word ptr [edx-68h], fs
+0x0460083C  vmwrite ecx, ecx
+0x0460103C  pop     ebx
+0x0460183C  cld
+0x0460203C  adc     al, 50h ; 'P'
+0x046023E8  ror     byte ptr [ebx-264AFEE1h], 38h ; '8'
+0x046023EC  mov     ch, 0D9h
+0x04602BEC  inc     ebp
+0x046033EC  pop     edx
+0x04603BEC  or      eax, 871D5881h
+0x046043EC  and     al, [ebx+1Ch]
+0x04604BEC  or      cl, bh
+0x046053EC  clc
+0x0460540C  pop     eax
+0x0460540F  push    es
+0x04605410  call    near ptr 4024D473h
+0x04605C10  adc     al, 0D4h
+0x04606410  iret
+0x04606C10  into
+0x04607410  cmp     eax, 8B83D04h
+0x0460749C  jl      short near ptr dword_4607410+67h
+0x04607C9C  das
+0x0460849C  push    edi
+0x04608C9C  adc     al, 72h ; 'r'
+0x0460949C  aas
+0x04609C9C  clc
+0x0460A49C  das
+0x0460AC9C  stosd
+0x0460B49C  sbb     byte ptr [eax+77C040AEh], 73h ; 's'
+0x0460BC9C  scasb
+0x0460C49C  call    near ptr 929FAFC9h
+0x0460CC9C  xor     ds:1249B951h, ch
+0x0460D49C  adc     ecx, [edx]
+0x0460DC9C  test    [eax], dl
+0x0460E49C  out     dx, eax
+0x0460EC9C  enter   0FFFFEDDEh, 6Fh ; 'o'
+0x0460F49C  nop
+0x0460FC9C  add     al, 0C4h
+0x0461049C  iret
+0x04610C9C  arpl    [edx-7Fh], cx
+0x0461149C  mov     eax, 106EB4EFh
+0x04611C9C  dec     eax
+0x0461249C  push    esp
+0x04612C9C  lock mov bh, 0F2h
+0x0461349C  shr     byte ptr [ebp+7], 1
+0x04613C9C  clc
+0x0461449C  dec     esp
+0x04614C9C  cld
+0x0461549C  dec     edi
+0x04615C9C  cmovo   ebx, [edx-69D37262h]
+0x0461649C  test    byte ptr [ebx-2Eh], 4
+0x04616C9C  or      eax, 7B9A0913h
+0x0461749C  stosd
+0x04617C9C  popf
+0x0461849C  retf    1220h
+0x04618C9C  rep jl short near ptr dword_4618C9C+75h
+0x0461949C  cmp     ah, [esp+ecx*8+60h]
+0x04619C9C  dec     edi
+0x0461A49C  add     ah, [edx+ecx*4]
+0x0461AC9C  push    es
+0x0461B49C  or      esi, esi
+0x0461BC9C  mov     al, ds:9093F384h
+0x0461C49C  inc     eax
+0x0461CC9C  cdq
+0x0461D49C  cmc
+0x0461DC9C  pop     esp
+0x0461E49C  push    ebp
+0x0461EC9C  cmp     ecx, [ecx+56h]
+0x0461F49C  imul    eax, [ebp-677F3280h], 0C9EF9D2Ah
+0x0461FC9C  cdq
+0x0462049C  dec     esp
+0x04620C9C  add     al, 0E4h
+0x0462149C  in      al, 0FEh
+0x04621C9C  jz      short near ptr dword_462149C+787h
+0x0462249C  add     [edi+31D46CFDh], ebx
+0x04622C9C  sbb     dword ptr [ecx-676BF8DBh], 62F06A86h
+0x0462349C  pop     esi
+0x04623C9C  or      [edi], ah
+0x0462449C  push    eax
+0x04624C9C  push    edx
+0x0462549C  shr     dword ptr [eax], 0EBh
+0x04625C9C  xchg    eax, edi
+0x0462649C  jl      short near ptr dword_4625C9C+7E4h
+0x0462674C  dec     eax
+0x04626F4C  lds     esi, [ecx]
+0x0462774C  add     [ebx+19F2700Eh], ecx
+0x04627F4C  add     edi, [eax+6CD6F52Fh]
+0x0462874C  and     al, 3Fh ; '?'
+0x04628F4C  mov     ebx, 8AA0823Fh
+0x0462974C  add     al, 0BCh
+0x04629C48  push    30h ; '0'
+0x04629C4B  add     bh, dh
+0x04629C4C  idiv    dword ptr [ecx]
+0x0462A44C  jnz     short near ptr dword_4629C4C+7B4h
+0x0462AC4C  mov     ecx, 16A2E3F5h
+0x0462B44C  xchg    eax, edi
+0x0462BC4C  loope   near ptr dword_462B44C+7E1h
+0x0462C44C  cli
+0x0462C8DC  sub     bh, bh
+0x0462C994  pop     edi
+0x0462C996  mov     ds:0C5C9B7Bh, eax
+0x0462C998  wait
+0x0462D198  sub     [esi], ch
+0x0462D998  xor     [ecx+729328FBh], bl
+0x0462E198  dd 3370E0FEh, 400007E6h, 0FAAD0C20h, 0CAB967DDh, 928E1828h
+0x0462E430  loopne  near ptr dword_462E434+67h
+0x0462E434  push    eax
+0x0462EC34  dd 0E071FFFEh, 26137250h, 98AEF56Eh, 1C07910Eh, 758046F8h
+0x0462F434  inc     al
+0x0462FC34  test    [eax], edi
+0x04630434  adc     al, 0C0h
+0x04630C34  aas
+0x04631434  cmp     esi, [edx]
+0x04631C34  bound   edi, [esi-397750F6h]
+0x04632434  pusha
+0x04632C34  loop    near ptr dword_4632C34+51h
+0x046333F4  add     [ebp+2E19011Bh], ah
+0x046333F8  sbb     [esi], ebp
+0x04633A00  adc     [edi+0], ch
+0x04633A04  ror     byte ptr [ecx+515D36BEh], 0CCh
+0x04634204  jmp     far ptr 685Dh:604EB92Fh
+0x04634A04  mov     eax, 0BE10B825h
+0x04635204  call    near ptr 589E481Dh
+0x04635A04  jmp     near ptr 0ADD316D6h
+0x04636204  rcl     dword ptr [esp+edi*8+55480E34h], 1
+0x04636A04  jo      short near ptr dword_4636A04+7Ah
+0x04637204  retn
+0x04637A04  wait
+0x04638204  mov     [edi], eax
+0x04638A04  mov     cl, 11h
+0x04639204  or      al, 7Eh ; '~'
+0x04639A04  in      al, 0D0h
+0x0463A204  lds     ebp, ds:5FF42C48h
+0x0463AA04  rcr     dword ptr [esi], 0EBh
+0x0463B204  cmps    byte ptr ds:[esi], byte ptr es:[edi]
+0x0463BA04  pop     esp
+0x0463C204  add     [ecx+edi*8-8B8C021h], esp
+0x0463CA04  cmp     al, 0F8h
+0x0463D204  dd 559B28Ch, 5840ACB7h, 8500D8E0h, 7E883EB9h, 1BF0C69h
+0x0463DA04  sub     [ebx], cl
+0x0463E204  repne xor [eax+70FC82A6h], ah
+0x0463EA04  add     [ecx-8], ah
+0x0463F204  sub     bl, [eax]
+0x0463FA04  fmul    qword ptr [ebx]
+0x0463FFC0  inc     eax
+0x0463FFC4  loop    near ptr dword_463FA04+56Ah
+0x046407C4  mov     dl, 0E6h
+0x04640FC4  mov     edi, 4C1A4D5Ah
+0x046417C4  cmp     eax, ebp
+0x04641FC4  inc     esi
+0x046427C4  xor     [edi-1Eh], bl
+0x04642FC4  push    ds
+0x046437C4  fild    word ptr [eax+0F385C60h]
+0x04643FC4  and     al, [ecx]
+0x046447C4  sbb     [ebx+6Eh], ecx
+0x04644E48  retn
+0x04644E49  pusha
+0x04644E4C  jmp     far ptr algn_1278094
+0x0464564C  out     0FBh, al
+0x04645E4C  in      al, 3Fh ; '?'
+0x0464664C  mov     dword ptr loc_C2CA61+2, eax
+0x04646E4C  add     eax, ecx
+0x0464764C  mov     dh, [edx+6Ah]
+0x04647E4C  out     0EEh, al
+0x0464864C  cmp     dword ptr [eax], 3Eh ; '>'
+0x04648E4C  adc     al, 5
+0x0464964C  or      cl, ds:0D27C1358h
+0x04649E4C  jo      short near ptr dword_4649E4C+11h
+0x0464A64C  sahf
+0x0464AE4C  nop
+0x0464B64C  add     cl, ch
+0x0464BE4C  mov     [edx+43h], ebx
+0x0464C64C  mov     ebp, 42E7DC48h
+0x0464CE4C  sbb     [ecx-2B66B4F5h], ebp
+0x0464D64C  loop    near ptr dword_464D64C+27h
+0x0464DE4C  inc     edi
+0x0464E64C  adc     al, 5Eh ; '^'
+0x0464EE4C  add     [edi+ecx*2-70687CEBh], bl
+0x0464F64C  insb
+0x0464FE4C  mov     dl, 27h ; '''
+0x0465064C  inc     ecx
+0x04650E4C  movsb
+0x0465164C  xchg    eax, ecx
+0x04651E4C  and     [edx], al
+0x0465264C  sbb     [edi+0], dl
+0x04652E4C  rcl     byte ptr [edx], 1
+0x0465364C  hnt jo  short near ptr dword_4652E4C+7E9h
+0x04653E4C  daa
+0x0465464C  add     [edi], ebp
+0x0465466C  xor     byte ptr [ebp+32C5C401h], 7Dh ; '}'
+0x04654670  dd 7D32C5C4h, 38476D00h, 810B6B29h, 0EBB0F1h, 0A02348Fh
+0x04654E70  clc
+0x04655670  cmp     esp, [edx-71h]
+0x04655E70  mov     dl, 44h ; 'D'
+0x04656670  inc     ebp
+0x04656E70  retn    0D8E4h
+0x04657670  mov     dl, [eax+655F8EAAh]
+0x04657E70  sbb     [esi], al
+0x04658670  xlat
+0x04658E70  call    near ptr 94510135h
+0x04659670  jbe     short near ptr dword_4659670+14h
+0x04659E70  insb
+0x0465A670  call    far ptr 7128h:0C5A7D37Ch
+0x0465AE70  dd 1580F08Dh, 0E7326EB9h, 0CD3C3760h, 0A4B01722h, 0AFA612D8h
+0x0465B670  setalc
+0x0465BE70  jnz     short near ptr dword_465BE70+4Dh
+0x0465C670  add     eax, 9195F66Dh
+0x0465CE70  jmp     near ptr 7DF60376h
+0x0465D670  stc
+0x0465DE70  xor     eax, 0ED65CCE2h
+0x0465E670  in      al, dx
+0x0465EE70  add     [eax+eax*2+28h], ebp
+0x0465F670  out     0AAh, eax
+0x0465FE70  test    [eax+2Ah], esi
+0x04660670  dd 484D58Dh, 0AF590A87h, 1BC948E9h, 0FE972BF0h, 54154239h
+0x04660E70  sar     byte ptr [edx-46D1732h], cl
+0x04661670  movsb
+0x04661E70  sub     al, 56h ; 'V'
+0x04662670  push    0FFFFFFB6h
+0x04662E70  cdq
+0x04663670  shr     byte ptr [esi+5Ch], 2Dh ; '-'
+0x04663E70  push    0FFFFFFECh
+0x04664670  mov     al, 0B6h
+0x04664E70  rcl     dword ptr [eax-55h], 0A3h
+0x04665670  xchg    eax, esp
+0x04665E70  inc     eax
+0x04666670  inc     eax
+0x04666E70  pop     esi
+0x04667670  jbe     short near ptr dword_4666E70+7C0h
+0x04667E70  pop     ebp
+0x04668670  and     al, 63h ; 'c'
+0x04668E70  adc     al, 0A7h
+0x04668E74  or      ecx, ebp
+0x0466923C  sar     dh, 1
+0x0466923E  retn
+0x0466923F  add     [edx+edi*4-0Eh], edi
+0x04669240  jl      short near ptr dword_4668E74+388h
+0x04669A40  sub     [edx-4ABCEF87h], edi
+0x0466A240  lahf
+0x0466AA40  out     dx, eax
+0x0466B240  outsd
+0x0466BA40  sbb     [edx-64B7FBAFh], ebx
+0x0466C240  push    es
+0x0466CA40  or      [edi+3Ch], al
+0x0466D240  adc     bl, [edi+73h]
+0x0466DA40  sti
+0x0466E240  popa
+0x0466EA40  push    edi
+0x0466F240  jnz     short near ptr dword_466EA40+7DAh
+0x0466FA40  sbb     ds:6BBCE7B7h[edx*8], al
+0x04670240  inc     esp
+0x04670A40  mov     ebp, 427E80C5h
+0x04671240  jnz     short near ptr dword_4671240+32h
+0x04671A40  test    eax, 75BA1340h
+0x04672240  in      al, 5
+0x04672A40  out     1, al
+0x04673240  jz      short near ptr dword_4672A40+7D9h
+0x04673A40  out     0FEh, al
+0x04674240  jnz     short near ptr dword_4674240+0Dh
+0x04674A40  xor     eax, 864236D3h
+0x04675240  sub     al, 0B0h
+0x04675A40  dd 27A93D8Ch, 0D467010Fh, 0F1F26502h, 31C8E4A5h, 2B6CF0C2h
+0x04676240  nop
+0x04676A40  cli
+0x04677240  add     eax, [eax]
+0x04677A40  rcr     dword ptr [esi], 1
+0x04678240  lodsb
+0x04678A40  inc     esi
+0x04679240  sub     [ebp-68h], bl
+0x04679A40  jecxz   short near ptr dword_4679240+79Ch
+0x0467A240  lds     esi, [edi]
+0x0467AA40  add     eax, 3C605D4Eh
+0x0467B240  mov     eax, ds:5284B776h
+0x0467BA40  out     dx, eax
+0x0467C240  cmp     [ecx+46h], dl
+0x0467CA40  mov     ah, 88h
+0x0467D240  add     [esi-1927D2D7h], al
+0x0467DA40  movsb
+0x0467E240  jmp     fword ptr ds:0D0DB5E30h
+0x0467EA40  mov     ebx, 8E42270Ch
+0x0467F240  int     0A2h
+0x0467FA40  sal     byte ptr [edx+2], cl
+0x04680240  sal     al, 1Ch
+0x04680A40  test    ds:2AA9202Bh, ch
+0x04681240  push    eax
+0x04681A40  or      dh, [ebp-0Fh]
+0x04682240  retf    0D5BCh
+0x04682A40  xor     bh, [ebp-12h]
+0x04683240  jmp     far ptr 6A6Ch:771BA500h
+0x04683A40  push    es
+0x04684240  sub     byte ptr [ebx], 3Dh ; '='
+0x04684A40  push    es
+0x04685240  enter   4E54h, 12h
+0x04685594  retf    0C4A8h
+0x04685597  pop     es
+0x04685598  jnp     short near ptr dword_4685240+310h
+0x04685D98  retn    260Bh
+0x04686598  add     esp, [edx]
+0x04686D98  jz      short near ptr dword_4686D98+3
+0x04687598  cmp     dword ptr [eax-61B56749h], 0FFFFFF8Bh
+0x04687D98  rol     dword ptr [ebx-3408B2E0h], 1
+0x04688598  jecxz   short near ptr dword_4688598+24h
+0x04688D98  dec     edx
+0x04689598  inc     dword ptr [ecx-46B8177h]
+0x04689D98  daa
+0x0468A598  outsb
+0x0468AD98  mov     ebx, 5BDF162Dh
+0x0468B598  dec     esp
+0x0468BD98  add     dword ptr [edx-769C51F4h], 0D41CCEh
+0x0468C578  pusha
+0x0468C57C  add     al, 61h ; 'a'
+0x0468C810  lock in eax, dx
+0x0468C811  in      eax, dx
+0x0468C814  sbb     ds:0A4D03569h, al
+0x0468CDDC  and     byte ptr [ebx-2ABFECAh], 0Dh
+0x0468CDE0  push    esp
+0x0468D5E0  and     eax, 84DC4757h
+0x0468DDE0  sbb     al, bh
+0x0468E5E0  add     [ebx-521A764Ah], al
+0x0468EDE0  mov     cl, 50h ; 'P'
+0x0468F5E0  mov     esp, 98B298EEh
+0x0468FDE0  xlat
+0x046905E0  adc     [eax], ah
+0x04690DE0  and     [eax], ecx
+0x046915E0  stosb
+0x04691DE0  add     al, 5
+0x046925E0  dd 0DFE3FF8Dh, 1D6F1C00h, 1760883Bh, 4580C68h, 2D326E0Bh
+0x04692C10  inc     eax
+0x04692C14  dec     edx
+0x04693414  and     [eax], eax
+0x04693C14  outsb
+0x04694414  adc     bh, bl
+0x04694C14  sbb     cl, fs:[ebx+edx*4-1908B70Fh]
+0x04695414  sub     [edx+5463C3CBh], dl
+0x04695C14  adc     eax, 0E9E03672h
+0x04696414  adc     al, 0FCh
+0x04696C14  mov     ebp, 473D900h
+0x04697414  test    ch, al
+0x04697C14  mov     al, 4
+0x04698414  fisubr  dword ptr [ebp-1Dh]
+0x04698C14  std
+0x04699414  dec     byte ptr [edi-7]
+0x04699C14  dec     ebp
+0x0469A414  mov     cl, 1
+0x0469AC14  xor     bh, [edi-73CFAEF7h]
+0x0469B414  cmp     esi, [ecx+5Eh]
+0x0469BC14  dd 4082E3C4h, 583F8393h, 9938655Dh, 8A5596F2h, 0E79F678h
+0x0469C414  push    ecx
+0x0469CC14  outsb
+0x0469D414  sbb     [ecx+56h], ah
+0x0469DC14  add     al, 7
+0x0469DDB4  add     [eax-78h], ebx
+0x0469E5B4  mov     eax, ds:250A40B4h
+0x0469EDB4  pop     es
+0x0469F5B4  adc     bh, al
+0x0469FDB4  push    es
+0x046A05B4  mov     eax, 0D750CB53h
+0x046A0DB4  test    dl, ch
+0x046A15B4  les     ecx, [esi+3E384EC2h]
+0x046A1DB4  hlt
+0x046A25B4  inc     esi
+0x046A2DB4  enter   72D2h, 49h ; 'I'
+0x046A35B4  jnp     short near ptr dword_46A35B4+45h
+0x046A3DB4  inc     eax
+0x046A45B4  mov     ds:0BE800EB9h, al
+0x046A4DB4  nop
+0x046A55B4  cmp     [eax], al
+0x046A5DB4  pop     ebp
+0x046A65B4  int     67h ; 'g'
+0x046A6DB4  sub     edx, ebx
+0x046A75B4  jnz     short near ptr dword_46A75B4+26h
+0x046A7DB4  cmp     ecx, [eax+93444AFh]
+0x046A85B4  push    cs
+0x046A8DB4  add     ch, [esi]
+0x046A95B4  push    18h
+0x046A9DB4  jns     short near ptr dword_46A9DB4+47h
+0x046AA5B4  mov     cl, [ebx+esi*2+9989D57h]
+0x046AADB4  push    edi
+0x046AB5B4  neg     dword ptr ds:64EA047Eh
+0x046ABDB4  call    far ptr 0A207h:0C92EA9F3h
+0x046AC5B4  cmp     eax, 4F482F56h
+0x046ACDB4  pop     ecx
+0x046AD5B4  cmpsb
+0x046ADDB4  in      eax, 48h ; 'H'
+0x046AE5B4  adc     eax, 0FE4A4FFCh
+0x046AEDB4  push    edx
+0x046AF5B4  push    ds
+0x046AFDB4  xor     al, dl
+0x046B05B4  cmp     edx, edx
+0x046B0DB4  adc     al, 33h ; '3'
+0x046B15B4  popf
+0x046B1DB4  push    edi
+0x046B25B4  adc     al, 28h ; '('
+0x046B2DB4  arpl    di, di
+0x046B35B4  xor     eax, 45387690h
+0x046B3DB4  sti
+0x046B45B4  stosd
+0x046B4DB4  xor     eax, 81A0D74Ch
+0x046B55B4  xor     ch, [edi+68EC1F4Bh]
+0x046B5DB4  cmp     [esi+2Eh], al
+0x046B65B4  test    bh, cl
+0x046B6DB4  dd 1DF8EAC4h, 0F6A37ABDh, 77E87F44h, 7D0B6982h, 0FD19210Ch
+0x046B75B4  sub     byte ptr [edi], 27h ; '''
+0x046B7DB4  jmp     short near ptr dword_46B75B4+7C2h
+0x046B85B4  add     [eax+39061F4Dh], esp
+0x046B8DB4  lea     esi, [ecx+1Ch]
+0x046B95B4  add     [ebx+edx*8-4Bh], esp
+0x046B9DB4  pslld   mm0, qword ptr [ecx+5Dh]
+0x046BA5B4  cmp     ebx, [ebx]
+0x046BADB4  mov     [esi-2F2E03DCh], ebx
+0x046BADEC  and     [esi+38h], bh
+0x046BADF0  into
+0x046BB5F0  sbb     [ebx], al
+0x046BBDF0  adc     [ecx-16h], ebx
+0x046BC5F0  adc     edi, [esi]
+0x046BC68C  inc     edx
+0x046BC68F  or      ch, [edi+3414526Ah]
+0x046BC690  scasd
+0x046BCACC  add     [ecx+5EA80116h], dl
+0x046BCAD0  test    al, 5Eh ; '^'
+0x046BD2D0  in      al, dx
+0x046BDAD0  add     [ecx], eax
+0x046BE2D0  push    0DEC64EDCh
+0x046BEAD0  inc     ebp
+0x046BF2D0  sahf
+0x046BF704  add     cl, bl
+0x046BF708  xchg    eax, esp
+0x046BFF08  test    eax, 2565FFADh
+0x046C0708  pop     es
+0x046C0F08  push    es
+0x046C1708  sti
+0x046C1F08  cli
+0x046C2708  add     [ecx+edx*8-10515B87h], bh
+0x046C2F08  inc     eax
+0x046C3708  and     al, [esi]
+0x046C3F08  aad     77h ; 'w'
+0x046C4708  stosd
+0x046C4F08  push    eax
+0x046C5708  call    far ptr 0D03h:0D3757EB0h
+0x046C5F08  dec     eax
+0x046C6708  cmp     bh, ah
+0x046C6F08  lea     edi, [esi+1A94C6D0h]
+0x046C7708  sub     al, 90h
+0x046C7F08  wait
+0x046C8708  adc     al, 5Bh ; '['
+0x046C8F08  xchg    eax, [ecx]
+0x046C9708  aaa
+0x046C9F08  pusha
+0x046CA708  mov     ecx, 40F650C6h
+0x046CAF08  pop     ebx
+0x046CB708  jl      short near ptr dword_46CAF08+7CFh
+0x046CBF08  ficomp  dword ptr ds:5FDC1205h
+0x046CC708  dd 2552C162h, 0EC072A6Dh, 96753E01h, 26301064h, 0A3DE1C2Ah
+0x046CCF08  in      eax, dx
+0x046CD708  cmpsb
+0x046CDF08  xor     esi, 90C38465h
+0x046CE708  inc     esi
+0x046CEC60  add     [ecx+56250304h], ah
+0x046CEC64  and     eax, 40847556h
+0x046CF464  bound   ebx, [ebp+1Ch]
+0x046CFC64  jmp     far ptr 0E00h:2D4A8726h
+0x046D0464  dec     ebx
+0x046D0C64  mov     ecx, 51EA2C09h
+0x046D1464  pop     edi
+0x046D1C64  mov     dl, 0A3h
+0x046D22A8  add     bl, 44h ; 'D'
+0x046D22AC  cmpsd
+0x046D2AAC  jns     short near ptr dword_46D22AC+7C2h
+0x046D32AC  sbb     [eax], dl
+0x046D3AAC  wbinvd
+0x046D42AC  add     [edx+28A67614h], dh
+0x046D4AAC  pop     edi
+0x046D52AC  xchg    eax, esi
+0x046D5AAC  pop     esp
+0x046D62AC  inc     eax
+0x046D6AAC  adc     eax, 9FF13F4Dh
+0x046D72AC  int     0
+0x046D7AAC  out     0Fh, eax
+0x046D82AC  adc     byte ptr ds:0D807D878h, 0F5h
+0x046D8AAC  repne lfs ebp, cs:[eax-63700A70h]
+0x046D92AC  sbb     ecx, [edi]
+0x046D9AAC  push    esi
+0x046DA2AC  jl      short near ptr dword_46DA2AC+30h
+0x046DAAAC  pop     ss
+0x046DB2AC  or      [esi+0D6909Ch], edx
+0x046DBAAC  arpl    [eax+ebp*4], bx
+0x046DC2AC  pop     edx
+0x046DCAAC  mov     esi, 8497D8AAh
+0x046DD2AC  cmp     [ecx], dh
+0x046DDAAC  jnp     short near ptr dword_46DD2AC+795h
+0x046DE2AC  inc     ebx
+0x046DEAAC  jmp     far ptr 7D5Ch:48A90B0h
+0x046DEE00  jbe     short near ptr dword_46DEAAC+2FBh
+0x046DF000  dd 400h dup(?)
